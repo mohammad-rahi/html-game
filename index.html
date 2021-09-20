@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#DE9425" />
+  <meta name="author" content="Mohammad Rahi" />
+  <!-- Bootstrap@5 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" type="text/css" media="all" />
+  <!-- custom CSS -->
+  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+</head>
+
+<body onload="loadGame()">
+  <div id="overlay-wrapper" class="overflow-hidden">
+    <canvas id="canvas"></canvas>
+    <div id="overlay">
+      <button class="btn" onclick="startGame(this)">Start</button>
+    </div>
+  </div>
+  <div class="wrapper container">
+    <button class="btn left" ontouchstart="move('left')" ontouchend="clearMove()">⬅️</button>
+    <button class="btn up" ontouchstart="move('up')" ontouchend="clearMove()">⬆️</button>
+    <button class="btn right" ontouchstart="move('right')" ontouchend="clearMove()">➡️</button>
+    <button class="btn down" ontouchstart="move('down')" ontouchend="clearMove()">⬇️</button>
+  </div>
+  <audio id="bg" src="bg.mp3" loop></audio>
+  <audio id="coinSound" src="coin.mp3"></audio>
+  <audio src="over.wav" id="over"></audio>
+  <!-- JavaScript -->
+  <script src="main.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

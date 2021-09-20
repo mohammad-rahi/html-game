@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 25% auto 25%;
+}
+
+button,
+#overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 1px 2px 1rem rgba(0, 0, 0, .2);
+}
+
+.wrapper button {
+  padding: 1rem;
+  margin: .5rem;
+  border-radius: .3rem;
+  font-size: 2rem;
+  transition: all .4s;
+}
+
+.wrapper button:hover {
+  background-color: #DE9425;
+}
+
+.left {
+  grid-column: 1;
+  grid-row: 1 / span 6;
+}
+
+.up {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+
+.right {
+  grid-column: 3;
+  grid-row: 1 / span 6;
+}
+
+.down {
+  grid-column: 2;
+  grid-row: 3 / span 4;
+}
+
+#overlay-wrapper {
+  position: relative;
+}
+
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .6);
+}
+
+#overlay button {
+  font: bold 2rem sans-serif;
+  background-color: #DE9425;
+}
+
+canvas {
+  background: url("bg1.jpg") 0/100% 100% repeat-x;
+  animation: animated 60s infinite;
+}
+
+@keyframes animated {
+  0% {
+    background-position: 156rem 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
